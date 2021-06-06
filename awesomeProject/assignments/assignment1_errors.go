@@ -37,7 +37,7 @@ func NewDbTableClient(writeDb *sql.DB, readDb *sql.DB, tableName string) (*TestD
 }
 
 func NewTestDbClient() (*TestDbClient, error) {
-	testTableName := "test_table"
+	testTableName := "test_table_name"
 	testDbClient, err := NewDbTableClient(nil, nil,testTableName)
 	if err != nil {
 		return nil, errors.Wrapf(err, "new db table client error: %v", testTableName)
